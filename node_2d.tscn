@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bc4n3k5tyxsac"]
+
+[ext_resource type="FontFile" uid="uid://rpldxm0ivivu" path="res://asses/ComicoroRu_0.ttf" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://13k1qqy8tbvv" path="res://asses/sprite.png" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://dgxn8sdbddrnb" path="res://icon.svg" id="2_epypp"]
+[ext_resource type="Script" uid="uid://txxg5kxfrvkk" path="res://node_2d.gd" id="3_0hol4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7nb4"]
+atlas = ExtResource("1_epypp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0hol4"]
+texture = SubResource("AtlasTexture_j7nb4")
+texture_margin_left = 2.0
+texture_margin_top = 2.0
+texture_margin_right = 2.0
+texture_margin_bottom = 2.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="Theme" id="Theme_7lvfe"]
+default_font = ExtResource("1_0e48y")
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/styles/normal = SubResource("StyleBoxTexture_0hol4")
+
+[node name="main" type="Control" unique_id=472625068 node_paths=PackedStringArray("name_label", "job_label", "background", "avatar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7lvfe")
+script = ExtResource("3_0hol4")
+name_label = NodePath("MarginContainer/VBoxContainer/NameLabel")
+job_label = NodePath("MarginContainer/VBoxContainer/Label2")
+background = NodePath("ColorRect")
+avatar = NodePath("MarginContainer/VBoxContainer/Avatar")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=804652442]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6627451, 0.61960787, 0.99215686, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=729734908]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1246010322]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer" unique_id=190138300]
+custom_maximum_size = Vector2(35, 35)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_epypp")
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=637694056]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "text"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=689647644]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "text"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=442416753]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="dev" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1999215686]
+layout_mode = 2
+text = "dev"
+
+[node name="design" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=35367875]
+layout_mode = 2
+text = "design"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/dev" to="." method="_on_dev_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/design" to="." method="_on_design_pressed"]
