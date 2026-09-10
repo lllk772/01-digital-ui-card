@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://rpldxm0ivivu" path="res://asses/ComicoroRu_0.ttf" id="1_717wd"]
 [ext_resource type="Texture2D" uid="uid://13k1qqy8tbvv" path="res://asses/sprite.png" id="1_gswiu"]
 [ext_resource type="Script" uid="uid://cq6bctu8xf64y" path="res://script/ui_info.gd" id="3_d2gld"]
+[ext_resource type="PackedScene" uid="uid://0w01e5u1mauv" path="res://main.tscn" id="4_tp5ss"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cp77i"]
 atlas = ExtResource("1_gswiu")
@@ -48,7 +49,7 @@ region = Rect2(0, 48, 35, 14)
 atlas = ExtResource("1_gswiu")
 region = Rect2(35, 49, 29, 14)
 
-[node name="UiInfo" type="Control" unique_id=366957644]
+[node name="UiInfo" type="Control" unique_id=366957644 node_paths=PackedStringArray("Hp", "Hov", "Bag", "Wg", "Name")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,6 +58,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_gm8t2")
 script = ExtResource("3_d2gld")
+Hp = NodePath("VBoxContainer/Hp/HpTextEdit")
+Hov = NodePath("VBoxContainer/Hov/TextEdit")
+Bag = NodePath("VBoxContainer/Bag/TextEdit")
+Wg = NodePath("VBoxContainer/Wg/TextEdit")
+Name = NodePath("VBoxContainer/Name/NameTextEdit")
+NextScene = ExtResource("4_tp5ss")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1364142330]
 layout_mode = 1
@@ -145,3 +152,5 @@ layout_mode = 2
 [node name="NextButton" type="Button" parent="VBoxContainer" unique_id=553112920]
 layout_mode = 2
 text = "Next"
+
+[connection signal="pressed" from="VBoxContainer/NextButton" to="." method="_on_next_button_pressed"]

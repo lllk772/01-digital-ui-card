@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="01_DIGITAL_UI_CARD"
-run/main_scene="uid://bc4n3k5tyxsac"
+run/main_scene="uid://dkcelfbon0ful"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

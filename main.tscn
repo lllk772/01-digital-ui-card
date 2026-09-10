@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://13k1qqy8tbvv" path="res://asses/sprite.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://tju3r5hsu1or" path="res://asses/icon-3.png" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://cdrinnwo4fxk" path="res://script/ui.gd" id="3_7mycd"]
 [ext_resource type="FontFile" uid="uid://rpldxm0ivivu" path="res://asses/ComicoroRu_0.ttf" id="3_lquwl"]
 [ext_resource type="Theme" uid="uid://f8p6pb2wyth1" path="res://asses/new_theme.tres" id="4_1bvp3"]
 
@@ -51,7 +52,7 @@ region = Rect2(3, 21, 26, 24)
 
 [sub_resource type="Theme" id="Theme_deme7"]
 
-[node name="main" type="Control" unique_id=1580708341]
+[node name="main" type="Control" unique_id=1580708341 node_paths=PackedStringArray("hearts_container", "Lv_label", "Name_label", "time_label")]
 layout_mode = 3
 anchor_right = 1.4380001
 anchor_bottom = 1.6290001
@@ -60,6 +61,11 @@ offset_bottom = -0.028015137
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_bcaj3")
+script = ExtResource("3_7mycd")
+hearts_container = NodePath("VBoxContainer/UserHBoxContainer/VBoxContainer/HpFlowContainer")
+Lv_label = NodePath("VBoxContainer/LvHBoxContainer/LvLabel")
+Name_label = NodePath("VBoxContainer/UserHBoxContainer/VBoxContainer/NameLabel")
+time_label = NodePath("VBoxContainer/Stats/TimeBoxContainer/TimeLabel")
 
 [node name="Background" type="ColorRect" parent="." unique_id=780886055]
 layout_mode = 1
@@ -115,7 +121,7 @@ expand_mode = 3
 layout_mode = 2
 size_flags_vertical = 1
 theme = SubResource("Theme_j7nb4")
-text = "11"
+text = "1"
 
 [node name="Stats" type="HBoxContainer" parent="VBoxContainer" unique_id=620361499]
 layout_mode = 2
@@ -137,7 +143,7 @@ texture = SubResource("AtlasTexture_j7nb4")
 
 [node name="HpLabel" type="Label" parent="VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Hp" unique_id=282021954]
 layout_mode = 2
-text = "12"
+text = "5"
 
 [node name="Hov" type="HBoxContainer" parent="VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer" unique_id=197923623]
 layout_mode = 2
@@ -148,7 +154,7 @@ texture = SubResource("AtlasTexture_gmhg7")
 
 [node name="HovLabel" type="Label" parent="VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Hov" unique_id=246298812]
 layout_mode = 2
-text = "45"
+text = "5"
 
 [node name="Bag" type="HBoxContainer" parent="VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer" unique_id=1169678305]
 layout_mode = 2
@@ -159,7 +165,7 @@ texture = SubResource("AtlasTexture_cp77i")
 
 [node name="BagLabel" type="Label" parent="VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Bag" unique_id=821206629]
 layout_mode = 2
-text = "30"
+text = "5"
 
 [node name="Wg" type="HBoxContainer" parent="VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer" unique_id=352637996]
 layout_mode = 2
@@ -170,7 +176,7 @@ texture = SubResource("AtlasTexture_sbetp")
 
 [node name="WgLabel" type="Label" parent="VBoxContainer/Stats/StatsPanelContainer/StatsGridContainer/Wg" unique_id=804179660]
 layout_mode = 2
-text = "60"
+text = "5"
 
 [node name="TimeBoxContainer" type="HBoxContainer" parent="VBoxContainer/Stats" unique_id=1442767854]
 layout_mode = 2
