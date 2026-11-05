@@ -45,3 +45,4 @@ func _on_dev_pressed() -> void:
 
 func _on_design_pressed() -> void:
 	update_ui('design')
+	

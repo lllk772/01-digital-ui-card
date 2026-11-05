@@ -5,16 +5,11 @@
 [ext_resource type="Script" uid="uid://cq6bctu8xf64y" path="res://script/ui_info.gd" id="3_d2gld"]
 [ext_resource type="PackedScene" uid="uid://0w01e5u1mauv" path="res://main.tscn" id="4_tp5ss"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cp77i"]
-atlas = ExtResource("1_gswiu")
-region = Rect2(16, 0, 16, 16)
+[sub_resource type="SystemFont" id="SystemFont_4h0nc"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gmhg7"]
-texture = SubResource("AtlasTexture_cp77i")
-texture_margin_left = 3.0
-texture_margin_top = 3.0
-texture_margin_right = 3.0
-texture_margin_bottom = 3.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dy1fr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_asvqn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_way68"]
 atlas = ExtResource("1_gswiu")
@@ -30,7 +25,9 @@ region_rect = Rect2(0, 0, 16, 16)
 
 [sub_resource type="Theme" id="Theme_gm8t2"]
 default_font = ExtResource("1_717wd")
-Button/styles/normal = SubResource("StyleBoxTexture_gmhg7")
+Button/fonts/font = SubResource("SystemFont_4h0nc")
+Button/styles/normal = SubResource("StyleBoxEmpty_dy1fr")
+Button/styles/pressed = SubResource("StyleBoxFlat_asvqn")
 TextEdit/styles/normal = SubResource("StyleBoxTexture_eidvw")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_163dd"]

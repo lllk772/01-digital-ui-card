@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://drbgi4815gmhv"]
+
+[ext_resource type="Texture2D" uid="uid://dmhif5kmccjpx" path="res://asses/sprite1.png" id="1_b0ao2"]
+[ext_resource type="Texture2D" uid="uid://bpokcatotmv2h" path="res://asses/light.png" id="2_py83b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py83b"]
+atlas = ExtResource("1_b0ao2")
+region = Rect2(32, 36, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4qib"]
+atlas = ExtResource("1_b0ao2")
+region = Rect2(48, 36, 16, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbrsy"]
+atlas = ExtResource("1_b0ao2")
+region = Rect2(64, 36, 16, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_163dd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_py83b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4qib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbrsy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=246949062]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1179793544]
+sprite_frames = SubResource("SpriteFrames_163dd")
+autoplay = "default"
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=900249485]
+position = Vector2(0, 2)
+scale = Vector2(1.34375, 1.25)
+texture = ExtResource("2_py83b")

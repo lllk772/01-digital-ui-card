@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cd4yg13wodj6f"]
+
+[ext_resource type="Script" uid="uid://d1gx6d7icymbe" path="res://script/ui1.gd" id="1_27fn8"]
+[ext_resource type="Texture2D" uid="uid://5bjnw5yj80nr" path="res://asses/sprite4.png" id="1_fyqef"]
+[ext_resource type="FontFile" uid="uid://rpldxm0ivivu" path="res://asses/ComicoroRu_0.ttf" id="2_m6e0p"]
+
+[node name="Ui" type="CanvasLayer" unique_id=74737788 node_paths=PackedStringArray("label")]
+script = ExtResource("1_27fn8")
+label = NodePath("MarginContainer/HBoxContainer/Label")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=708900364]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1040229004]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer" unique_id=1324702780]
+layout_mode = 2
+texture = ExtResource("1_fyqef")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=437400839]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5595232, 1.2754649e-06, 3.3691526e-07, 1)
+theme_override_fonts/font = ExtResource("2_m6e0p")
+theme_override_font_sizes/font_size = 18
+text = "0"

@@ -19,3 +19,4 @@ func set_info(_hp, _hov, _bag, _wg, _name):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+signal item_collected(item_name: String)
