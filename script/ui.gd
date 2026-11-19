@@ -6,6 +6,7 @@ extends Control
 @export var Lv_label: Label
 @export var Name_label: Label
 @export var time_label: Label
+@onready var grid: GridContainer = $Grid
 # Укажите ссылку на текстуру сердца 
 var heart_texture = preload('res://asses/heart.png') 
 
@@ -49,3 +50,21 @@ func update_time():
 # Сигнал от Timer
 func _on_timer_timeout():
 	update_time()
+func refresh_ui():
+	for child in grid.get_children():
+		child.queue_tree()
+	for item in Global.inventory:
+		var slot = Button.new()
+		slot.icon = item.icon
+		slot.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		slot.custom_minimum_size = Vector2(60,60)
+		if item.amout > 1:
+			var count_label = Label.new()
+			count_label.text = str(item.amout)
+			count_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+			count_label.vertical_alignment = VERTICAL_ALIGNMENT_BOTTOM
+			count_label.set_anchors_preset(Control.PRESET_FULL_RECT)
+			count_label.add_theme_color_override("font_color",Color(1,1,1))
+			count_label.add_theme_color_override("font_outline_color",Color(0,0,0))
+			count_label.add_theme_constant_override("outline_size",4)
+			slot.add_child(count_label)

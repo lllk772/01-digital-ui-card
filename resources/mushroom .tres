@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cgygrwaea8bag"]
+
+[ext_resource type="Texture2D" uid="uid://ccckqy8rjqfo0" path="res://asses/sprite3.png" id="1_7k3nf"]
+[ext_resource type="Script" uid="uid://dcv2welj0nly2" path="res://script/item_data.gd" id="1_ixlbh"]
+
+[resource]
+script = ExtResource("1_ixlbh")
+name = "mush"
+icon = ExtResource("1_7k3nf")
+metadata/_custom_type_script = "uid://dcv2welj0nly2"

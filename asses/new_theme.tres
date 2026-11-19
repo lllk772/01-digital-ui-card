@@ -3,6 +3,41 @@
 [ext_resource type="Texture2D" uid="uid://13k1qqy8tbvv" path="res://asses/sprite.png" id="1_3t03o"]
 [ext_resource type="FontFile" uid="uid://rpldxm0ivivu" path="res://asses/ComicoroRu_0.ttf" id="1_ujyym"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3t03o"]
+load_path = "res://.godot/imported/sprite.png-d39ea1c77b69ba2fb8d1c6f4787fe17f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_deme7"]
+atlas = SubResource("CompressedTexture2D_3t03o")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_236yk"]
+texture = SubResource("AtlasTexture_deme7")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13c4m"]
+texture = SubResource("AtlasTexture_deme7")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vleu"]
+atlas = ExtResource("1_3t03o")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g56vk"]
+texture = SubResource("AtlasTexture_0vleu")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+region_rect = Rect2(0, 0, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_hp01x"]
 atlas = ExtResource("1_3t03o")
 region = Rect2(0, 0, 16, 16)
@@ -16,4 +51,7 @@ texture_margin_bottom = 2.0
 
 [resource]
 default_font = ExtResource("1_ujyym")
+Button/styles/focus = SubResource("StyleBoxTexture_236yk")
+Button/styles/hover = SubResource("StyleBoxTexture_13c4m")
+Button/styles/normal = SubResource("StyleBoxTexture_g56vk")
 TextEdit/styles/normal = SubResource("StyleBoxTexture_deme7")

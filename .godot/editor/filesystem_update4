@@ -1,6 +1,4 @@
+res://asses/02_FOREST_EXPLORER.tscn
 res://asses/new_theme.tres
 res://asses/lexel_titleset.tres
-res://asses/name_input.tscn
-res://script/gdscript.gd
-res://asses/02_FOREST_EXPLORER.tscn
-res://script/gdscript1.gd
+res://script/Global.gd

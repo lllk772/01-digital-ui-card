@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://xusd5uu06u02"]
+
+[ext_resource type="Texture2D" uid="uid://caxp5jky1b5oc" path="res://asses/axe1.png" id="1_68dip"]
+[ext_resource type="Script" uid="uid://dcv2welj0nly2" path="res://script/item_data.gd" id="2_3wy45"]
+
+[resource]
+script = ExtResource("2_3wy45")
+name = "axe"
+icon = ExtResource("1_68dip")
+is_tool = true
+damage = 10
+metadata/_custom_type_script = "uid://dcv2welj0nly2"

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dla62utwgkuoe" path="res://asses/player.png" id="1_im1cl"]
 [ext_resource type="Script" uid="uid://buch0go0qbi01" path="res://script/Player.gd" id="1_lavf3"]
+[ext_resource type="Resource" uid="uid://xusd5uu06u02" path="res://resources/axe.tres" id="2_f4v1q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5u3hn"]
 
@@ -79,8 +80,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="player" type="CharacterBody2D" unique_id=2107620797 node_paths=PackedStringArray("anim")]
+[node name="player" type="CharacterBody2D" unique_id=2107620797 node_paths=PackedStringArray("hand", "anim")]
 script = ExtResource("1_lavf3")
+hand = NodePath("Sprite2D")
+item_resources = ExtResource("2_f4v1q")
 anim = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2062317812]
@@ -94,3 +97,6 @@ rotation = 0.0024334753
 sprite_frames = SubResource("SpriteFrames_yosyv")
 animation = &"idle"
 frame_progress = 0.49062055
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=299936430]
+position = Vector2(-4, 0)

@@ -1,5 +1,10 @@
 CollisionShape2D
 Area2D
+Sprite2D
+Node2D
+GridContainer
+MarginContainer
+CanvasLayer
 Control
 Label
 Button
@@ -7,8 +12,3 @@ LineEdit
 PointLight2D
 CanvasModulate
 TextureRect
-HBoxContainer
-MarginContainer
-CanvasLayer
-Sprite2D
-Node2D

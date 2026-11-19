@@ -1,6 +1,10 @@
 [gd_resource type="TileSet" format=3 uid="uid://bkq1noorllbq7"]
 
+[ext_resource type="PackedScene" uid="uid://dwilh2t6ll2mb" path="res://scenes/tree.tscn" id="1_gslpo"]
 [ext_resource type="Texture2D" uid="uid://dmhif5kmccjpx" path="res://asses/sprite1.png" id="1_kupm0"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_vwfl7"]
+scenes/1/scene = ExtResource("1_gslpo")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gslpo"]
 texture = ExtResource("1_kupm0")
@@ -25,3 +29,4 @@ texture = ExtResource("1_kupm0")
 [resource]
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_gslpo")
+sources/0 = SubResource("TileSetScenesCollectionSource_vwfl7")

@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://w3l77gku05ho" path="res://script/mushrooms.gd" id="1_8gl68"]
 [ext_resource type="Texture2D" uid="uid://ccckqy8rjqfo0" path="res://asses/sprite3.png" id="2_ccqf2"]
+[ext_resource type="Resource" uid="uid://cgygrwaea8bag" path="res://resources/mushroom .tres" id="2_tawdi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_163dd"]
 radius = 4.1231055
 
 [node name="Node2D" type="Node2D" unique_id=2033836846]
 script = ExtResource("1_8gl68")
+item_resources = ExtResource("2_tawdi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1407861910]
 texture = ExtResource("2_ccqf2")

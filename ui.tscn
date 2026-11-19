@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://rpldxm0ivivu" path="res://asses/ComicoroRu_0.ttf" id="2_m6e0p"]
 
 [node name="Ui" type="CanvasLayer" unique_id=74737788 node_paths=PackedStringArray("label")]
+visible = false
 script = ExtResource("1_27fn8")
 label = NodePath("MarginContainer/HBoxContainer/Label")
 
